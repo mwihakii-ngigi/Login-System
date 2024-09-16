@@ -1,5 +1,6 @@
 from tkinter import *
 from PIL import ImageTk
+from tkinter import messagebox
 class Login:
     def __init__(self, root):
         self.root = root
@@ -30,8 +31,18 @@ class Login:
         self.password.place(x=90, y=240, width=320, height=35)
 
         #Button
-        forget = Button(Frame_login, text="Forget Password", bd=0, font=("Goudy old style", 12), fg="#6162FF", bg="white").place(x=90, y=280)
-        submit = Button(Frame_login, text="Login", bd=0, font=("Goudy old style", 15), bg="#6162FF", fg="white").place(x=90, y=320, width=180, height=40)
+        forget = Button(Frame_login, text="Forget Password", bd=0, cursor="hand2", font=("Goudy old style", 12), fg="#6162FF", bg="white").place(x=90, y=280)
+        submit = Button(Frame_login, command=self.check_function, cursor="hand2", text="Login?", bd=0, font=("Goudy old style", 15), bg="#6162FF", fg="white").place(x=90, y=320, width=180, height=40)
+
+    def check_function(self):
+        if self.username.get()=="" or self.password.get()=="":
+            messagebox.showerror("Error", "All fields are Required!", parent=self.root)
+        elif self.username.get() !="Mwihaki254" or self.password.get() !="123456":
+            messagebox.showerror("Error", "Invalid Username or Password", parent=self.root)
+        else:
+            messagebox.showinfo("Welcome", f"Welcome {self.username.get()}")    
+
+
 
 
 
