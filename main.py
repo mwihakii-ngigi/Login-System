@@ -43,10 +43,6 @@ class Login:
             messagebox.showinfo("Welcome", f"Welcome {self.username.get()}")    
 
 
-
-
-
-
 root = Tk()
 obj = Login(root)
 root.mainloop()
