@@ -20,14 +20,18 @@ class Login:
         subtitle = Label(Frame_login, text="Members Login Area", font=("Goudy old style", 15, "bold"), fg="#1d1d1d", bg="white").place(x=90, y=100)
 
         # Username 
-        lbl_user = Label(Frame_login, text="Password", font=("Goudy old style", 15, "bold"), fg="grey", bg="white").place(x=90, y=140)
+        lbl_user = Label(Frame_login, text="Username", font=("Goudy old style", 15, "bold"), fg="grey", bg="white").place(x=90, y=140)
         self.username = Entry(Frame_login, font=("Goudy old style", 15), bg="#E7E6E6")
         self.username.place(x=90, y=170, width=320, height=35)
 
         # Password
-        lbl_password = Label(Frame_login, text="Username", font=("Goudy old style", 15, "bold"), fg="grey", bg="white").place(x=90, y=210)
+        lbl_password = Label(Frame_login, text="Password", font=("Goudy old style", 15, "bold"), fg="grey", bg="white").place(x=90, y=210)
         self.password = Entry(Frame_login, font=("Goudy old style", 15), bg="#E7E6E6")
         self.password.place(x=90, y=240, width=320, height=35)
+
+        #Button
+        forget = Button(Frame_login, text="Forget Password", bd=0, font=("Goudy old style", 12), fg="#6162FF", bg="white").place(x=90, y=280)
+        submit = Button(Frame_login, text="Login", bd=0, font=("Goudy old style", 15), bg="#6162FF", fg="white").place(x=90, y=320, width=180, height=40)
 
 
 
